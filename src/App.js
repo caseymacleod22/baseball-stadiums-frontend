@@ -24,6 +24,19 @@ function App() {
 
   useEffect(() => {
     getAppData()
+    auth.onAuthStateChanged(user => {
+      if (user) {
+        setStadium(prevState => ({
+          ...prevState,
+          user,
+        }))
+      } else {
+        setStadium(prevState => ({
+          ...prevState,
+          user: null,
+        }))
+      }
+    })
   }, [])
 
   return (

@@ -1,6 +1,7 @@
 import {useState, useEffect} from 'react'
 import './App.css';
 import { auth } from './services/firebase'
+import Header from './components/Header/Header'
 
 function App() {
   const [stadium, setStadium] = useState ({
@@ -74,9 +75,7 @@ function App() {
   }
 
   return (
-    <div className="App">
-
-    </div>
+    <Header user={stadium.user}/>
   );
 }
 

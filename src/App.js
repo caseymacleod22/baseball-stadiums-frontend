@@ -39,6 +39,40 @@ function App() {
     })
   }, [])
 
+  async function addStadium(e) {
+    if(!stadium.user) return
+
+    e.preventDefault()
+
+    const BASE_URL = 'http://localhost:3001/api/stadiums'
+    const stadium = await fetch(BASE_URL, {
+      method: 'POST',
+      headers: {
+        'Content-type': 'Application/json'
+      },
+      body: JSON.stringify(stadium.newSkill)
+    }).then(res => res.jso())
+
+    setStadium((prevState) => ({
+      ...prevState,
+      stadiums: [...prevState.skills, stadium],
+      newStadium: {
+        stadium: '',
+        location: ''
+      },
+    }))
+  }
+
+  function handleChange(e) {
+    setStadium((prevState) => ({
+      ...prevState,
+      newStadium: {
+        ...prevState.newStadium,
+        [e.target.name]: e.target.value
+      }
+    }))
+  }
+
   return (
     <div className="App">
 

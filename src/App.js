@@ -4,7 +4,7 @@ import { auth } from './services/firebase'
 import Header from './components/Header/Header'
 
 function App() {
-  const [stadium, setStadium] = useState ({
+  const [state, setState] = useState ({
     user: null,
     stadiums: [{ stadium: 'Yankee Stadium', location: 'Bronx, New York'}],
     newStadium: {
@@ -17,7 +17,7 @@ function App() {
     const BASE_URL = 'http://localhost:3001/api/stadiums'
     const stadiums = await fetch(BASE_URL).then(res => res.json())
     console.log(stadiums)
-    setStadium((prevState) => ({
+    setState((prevState) => ({
       ...prevState,
       stadiums,
     }))
@@ -27,12 +27,12 @@ function App() {
     getAppData()
     auth.onAuthStateChanged(user => {
       if (user) {
-        setStadium(prevState => ({
+        setState(prevState => ({
           ...prevState,
           user,
         }))
       } else {
-        setStadium(prevState => ({
+        setState(prevState => ({
           ...prevState,
           user: null,
         }))
@@ -41,7 +41,7 @@ function App() {
   }, [])
 
   async function addStadium(e) {
-    if(!stadium.user) return
+    if(!state.user) return
 
     e.preventDefault()
 
@@ -51,21 +51,21 @@ function App() {
       headers: {
         'Content-type': 'Application/json'
       },
-      body: JSON.stringify(stadium.newSkill)
-    }).then(res => res.jso())
+      body: JSON.stringify(state.newStadium)
+    }).then(res => res.json())
 
-    setStadium((prevState) => ({
+    setState((prevState) => ({
       ...prevState,
-      stadiums: [...prevState.skills, stadium],
+      stadiums: [...prevState.stadiums, stadium],
       newStadium: {
         stadium: '',
-        location: ''
+        location: '',
       },
     }))
   }
 
   function handleChange(e) {
-    setStadium((prevState) => ({
+    setState((prevState) => ({
       ...prevState,
       newStadium: {
         ...prevState.newStadium,
@@ -76,14 +76,31 @@ function App() {
 
   return (
   <>  
-    <Header user={stadium.user}/>
+    <Header user={state.user}/>
       <main>
         <section>
-          {stadium.stadiums.map((s) => (
+          {state.stadiums.map((s) => (
             <article key={s.stadium}>
               <div>{s.stadium}</div> <div>{s.location}</div>
             </article>
           ))}
+          {
+            state.user &&
+          <>
+          <hr />
+          <form onSubmit={addStadium}>
+            <label>
+              <span>Stadium</span>
+              <input name='stadium' value={state.newStadium.stadium} onChange={handleChange}/>
+            </label>
+              <label>
+                <span>Location</span>
+                <input name="location" value={state.newStadium.location} onChange={handleChange}></input>
+              </label>
+              <button>Add Stadium</button>
+          </form>
+          </>
+          }
         </section>
       </main>
   </>    

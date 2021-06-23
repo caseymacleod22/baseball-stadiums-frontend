@@ -75,7 +75,18 @@ function App() {
   }
 
   return (
+  <>  
     <Header user={stadium.user}/>
+      <main>
+        <section>
+          {stadium.stadiums.map((s) => (
+            <article key={s.stadium}>
+              <div>{s.stadium}</div> <div>{s.location}</div>
+            </article>
+          ))}
+        </section>
+      </main>
+  </>    
   );
 }
 

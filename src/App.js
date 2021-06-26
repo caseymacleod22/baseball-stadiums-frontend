@@ -2,6 +2,8 @@ import {useState, useEffect} from 'react'
 import './App.css';
 import { auth } from './services/firebase'
 import Header from './components/Header/Header'
+import Weather from './components/Weather/Weather'
+import Tickets from './components/Tickets/Tickets'
 
 function App() {
   const [state, setState] = useState ({
@@ -102,6 +104,8 @@ function App() {
           </>
           }
         </section>
+        <Weather />
+        <Tickets />
       </main>
   </>    
   );

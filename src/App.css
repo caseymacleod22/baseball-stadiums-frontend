@@ -21,3 +21,9 @@ section {
 #userimage {
   border-radius: 50%;
 }
+
+#userinfo {
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+}

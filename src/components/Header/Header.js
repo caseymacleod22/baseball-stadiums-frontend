@@ -9,10 +9,10 @@ const Header = (props) => (
                 <>
                     <li>Welcome, {props.user.displayName}</li>
                     <li><img id ='userimage' src={props.user.photoURL} alt={props.user.displayName}/></li>
-                    <li onClick={logout}>Logout</li>
+                    <li class='loginlogout'onClick={logout}>Logout</li>
                 </>
                 :
-                <li onClick={login}>Login</li>    
+                <li class='loginlogout'onClick={login}>Login</li>    
             }
         </ul>
     </header>

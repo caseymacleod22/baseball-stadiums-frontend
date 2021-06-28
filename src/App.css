@@ -17,3 +17,7 @@ form {
 section {
   color: blue;
 }
+
+#userimage {
+  border-radius: 50%;
+}

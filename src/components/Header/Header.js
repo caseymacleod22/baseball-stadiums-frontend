@@ -8,7 +8,7 @@ const Header = (props) => (
                 props.user ?
                 <>
                     <li>Welcome, {props.user.displayName}</li>
-                    <li><img src={props.user.photoURL} alt={props.user.displayName}/></li>
+                    <li><img id ='userimage'src={props.user.photoURL} alt={props.user.displayName}/></li>
                     <li onClick={logout}>Logout</li>
                 </>
                 :

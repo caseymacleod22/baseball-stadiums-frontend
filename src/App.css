@@ -26,6 +26,7 @@ section {
   display: flex;
   flex-direction: row;
   list-style: none;
+  font-weight: bold;
 }
 
 .loginlogout:hover{

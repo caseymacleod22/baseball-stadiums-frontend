@@ -1,7 +1,7 @@
 const Tickets = (props) => {
     return (
         <div>
-            Ticket Data
+            <a target='_blank' href="https://www.ticketmaster.com/">Ticket Data</a>
         </div>
     )
 }

@@ -1,7 +1,7 @@
 const Weather = (props) => {
     return (
         <div>
-            Weather Data
+            <a target='_blank' href="https://weather.com/">Weather Data</a>
         </div>
     )
 }

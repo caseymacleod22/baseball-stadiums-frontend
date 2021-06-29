@@ -81,6 +81,7 @@ function App() {
     <Header user={state.user}/>
       <main>
         <section>
+          <h2 id='stadiumheader'>My Stadiums</h2>
           {state.stadiums.map((s) => (
             <article key={s.stadium}>
               <div>{s.stadium}</div> <div>{s.location}</div>

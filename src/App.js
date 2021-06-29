@@ -1,6 +1,7 @@
 import {useState, useEffect} from 'react'
 import './App.css';
 import { auth } from './services/firebase'
+import {Helmet} from 'react-helmet'
 import Header from './components/Header/Header'
 import Weather from './components/Weather/Weather'
 import Tickets from './components/Tickets/Tickets'
@@ -78,6 +79,9 @@ function App() {
 
   return (
   <>  
+  <Helmet>
+    <title>MLB Stadium Tracker</title>
+  </Helmet>
     <Header user={state.user}/>
       <main>
         <section>

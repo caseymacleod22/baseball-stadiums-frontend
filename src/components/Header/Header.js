@@ -2,7 +2,7 @@ import {login, logout} from '../../services/firebase'
 
 const Header = (props) => (
     <header>
-        <h1>My MLB Stadiums</h1>
+        <h1>MLB Stadium Tracker</h1>
         <ul id='userinfo'>
             {
                 props.user ?

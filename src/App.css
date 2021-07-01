@@ -104,3 +104,9 @@ button {
   border: none;
   outline: none;
 }
+
+button:hover {
+  color: white;
+  background-color: #484cb3;
+  cursor: pointer;
+}

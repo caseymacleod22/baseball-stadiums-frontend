@@ -92,3 +92,15 @@ label span {
   width: 4.5rem;
   padding-right: 7px;
 }
+
+button {
+  display: block;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1rem;
+  margin: 0.5rem 0 0 auto;
+  padding: 0.4rem;
+  background-color: rgb(211, 90, 90);
+  color: white;
+  border: none;
+  outline: none;
+}

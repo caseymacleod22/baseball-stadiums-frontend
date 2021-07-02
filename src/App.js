@@ -84,7 +84,23 @@ function App() {
   <Helmet>
     <title>MLB Stadium Tracker</title>
   </Helmet>
+  <Router>
     <Header user={state.user}/>
+    <Switch>
+          <div>
+            <ul>
+              <li>
+                <Link to='/stadiuminfo'>Stadium Info</Link>
+              </li>
+              <li>
+                <Route exact path='/stadiuminfo'>
+                  <StadiumInfo />
+                </Route>
+              </li>
+            </ul>
+          </div>
+          </Switch>
+        </Router>
       <main>
         <section>
           <h2 id='stadiumheader'>My Stadiums</h2>
@@ -111,22 +127,6 @@ function App() {
           </>
           }
         </section>
-        <Router>
-          <Switch>
-          <div>
-            <ul>
-              <li>
-                <Link to='/stadiuminfo'>Stadium Info</Link>
-              </li>
-              <li>
-                <Route exact path='/stadiuminfo'>
-                  <StadiumInfo />
-                </Route>
-              </li>
-            </ul>
-          </div>
-          </Switch>
-        </Router>
         <Weather />
         <Tickets />
       </main>

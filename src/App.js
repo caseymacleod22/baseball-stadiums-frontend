@@ -97,11 +97,11 @@ function App() {
           <hr />
           <form onSubmit={addStadium}>
             <label>
-              <span>Stadium</span>
+              <span id='stadiumspan'>Stadium</span>
               <input name='stadium' value={state.newStadium.stadium} onChange={handleChange}/>
             </label>
               <label>
-                <span>Location</span>
+                <span id='locationspan'>Location</span>
                 <input name="location" value={state.newStadium.location} onChange={handleChange}></input>
               </label>
               <button>Add Stadium</button>

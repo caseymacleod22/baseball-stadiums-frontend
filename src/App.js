@@ -113,7 +113,12 @@ function App() {
         <Router>
           <div>
             <ul>
-              <Link to='/about'>About</Link>
+              <li>
+                <Link to='/about'>About</Link>
+              </li>
+              <li>
+                <Link to='stadiuminfo'>Stadium Info</Link>
+              </li>
             </ul>
           </div>
         </Router>

@@ -5,6 +5,7 @@ import {Helmet} from 'react-helmet'
 import Header from './components/Header/Header'
 import Weather from './components/Weather/Weather'
 import Tickets from './components/Tickets/Tickets'
+import StadiumInfo from './components/Stadiuminfo/StadiumInfo'
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom'
 
 function App() {
@@ -111,16 +112,20 @@ function App() {
           }
         </section>
         <Router>
+          <Switch>
           <div>
             <ul>
               <li>
-                <Link to='/about'>About</Link>
+                <Link to='/stadiuminfo'>Stadium Info</Link>
               </li>
               <li>
-                <Link to='stadiuminfo'>Stadium Info</Link>
+                <Route exact path='/stadiuminfo'>
+                  <StadiumInfo />
+                </Route>
               </li>
             </ul>
           </div>
+          </Switch>
         </Router>
         <Weather />
         <Tickets />

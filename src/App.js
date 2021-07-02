@@ -5,6 +5,7 @@ import {Helmet} from 'react-helmet'
 import Header from './components/Header/Header'
 import Weather from './components/Weather/Weather'
 import Tickets from './components/Tickets/Tickets'
+import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom'
 
 function App() {
   const [state, setState] = useState ({
@@ -109,6 +110,13 @@ function App() {
           </>
           }
         </section>
+        <Router>
+          <div>
+            <ul>
+              <Link to='/about'>About</Link>
+            </ul>
+          </div>
+        </Router>
         <Weather />
         <Tickets />
       </main>

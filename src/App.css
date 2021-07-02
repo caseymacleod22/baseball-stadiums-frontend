@@ -68,6 +68,7 @@ main {
 
 #stadiumheader {
   color: rgb(211, 90, 90);
+  text-decoration: underline;
 }
 
 input,

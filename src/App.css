@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora&display=swap');
+
 * {
   box-sizing: border-box;
 }
@@ -33,7 +35,8 @@ form {
 
 section {
   color: #484cb3;
-  border: sol;
+  font-family: 'Lora', serif;
+  font-weight: bold;
 }
 
 #userimage {

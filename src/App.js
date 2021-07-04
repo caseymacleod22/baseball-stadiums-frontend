@@ -87,7 +87,7 @@ function App() {
   <Router>
     <Header user={state.user}/>
           <div>
-            <ul>
+            <ul  class='stadiuminfo'>
               <li>
                 <Link to='/stadiuminfo'>Stadium Info</Link>
               </li>

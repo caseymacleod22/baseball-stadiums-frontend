@@ -121,7 +121,7 @@ button:hover {
   cursor: pointer;
 }
 
-#stadiuminfo {
-  list-style: none;
+.stadiuminfo {
+  list-style-type: none;
   color: red;
 }

@@ -1,5 +1,7 @@
 import {Link} from 'react-router-dom'
 
+
+// TODO: REFACTOR STADIUM INFO
 const StadiumInfo = (props) => {
     return (
         <div class='stadiuminfo'>

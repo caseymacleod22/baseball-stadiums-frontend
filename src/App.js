@@ -6,6 +6,7 @@ import Header from './components/Header/Header'
 import Weather from './components/Weather/Weather'
 import Tickets from './components/Tickets/Tickets'
 import StadiumInfo from './components/Stadiuminfo/StadiumInfo'
+import Login from './components/Login/Login'
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom'
 
 function App() {
@@ -39,6 +40,7 @@ function App() {
       } else {
         setState(prevState => ({
           ...prevState,
+          state: <div>Please Login First</div>,
           user: null,
         }))
       }
@@ -95,6 +97,7 @@ function App() {
                 <Route exact path='/stadiuminfo'>
                   <StadiumInfo />
                 </Route>
+                  <Login />
               </li>
             </ul>
           </div>

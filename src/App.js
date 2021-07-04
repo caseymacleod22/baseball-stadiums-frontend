@@ -86,7 +86,6 @@ function App() {
   </Helmet>
   <Router>
     <Header user={state.user}/>
-    <Switch>
           <div>
             <ul>
               <li>
@@ -99,7 +98,6 @@ function App() {
               </li>
             </ul>
           </div>
-          </Switch>
         </Router>
       <main>
         <section>

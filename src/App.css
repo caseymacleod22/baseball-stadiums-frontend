@@ -120,3 +120,8 @@ button:hover {
   background-color: #484cb3;
   cursor: pointer;
 }
+
+#stadiuminfo {
+  list-style: none;
+  color: red;
+}

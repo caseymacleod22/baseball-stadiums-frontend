@@ -97,7 +97,9 @@ function App() {
                 <Route exact path='/stadiuminfo'>
                   <StadiumInfo />
                 </Route>
+                <Route exact path='/welcome'>
                   <Login />
+                </Route>
               </li>
             </ul>
           </div>

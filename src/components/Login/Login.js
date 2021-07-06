@@ -7,7 +7,6 @@ const Login = (props) => {
         <div>
             Please Login First
             <Link to='/'>Home Page</Link>
-
         </div>
     )
 }

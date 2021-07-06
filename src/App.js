@@ -7,12 +7,12 @@ import Weather from './components/Weather/Weather'
 import Tickets from './components/Tickets/Tickets'
 import StadiumInfo from './components/Stadiuminfo/StadiumInfo'
 import Login from './components/Login/Login'
-import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom'
+import { BrowserRouter as Router, Route, Link } from 'react-router-dom'
 
 function App() {
   const [state, setState] = useState ({
     user: null,
-    stadiums: [{ stadium: 'Yankee Stadium', location: 'Bronx, New York'}],
+    stadiums: [{ stadium: '', location: ''}],
     newStadium: {
       stadium: '',
       location: ''
@@ -40,7 +40,7 @@ function App() {
       } else {
         setState(prevState => ({
           ...prevState,
-          state: <div>Please Login First</div>,
+          // state: <div>Please Login First</div>,
           user: null,
         }))
       }
@@ -108,6 +108,15 @@ function App() {
           </div>
         </Router>
       <main>
+      {
+            !state.user &&
+            <>
+              <h1>PLEASE LOGIN FIRST!</h1>
+            </>
+          }
+          {
+            state.user &&
+          
         <section>
           <h2 id='stadiumheader'>My Stadiums</h2>
           {state.stadiums.map((s) => (
@@ -116,7 +125,6 @@ function App() {
             </article>
           ))}
           {
-            state.user &&
           <>
           <hr />
           <form onSubmit={addStadium}>
@@ -133,11 +141,13 @@ function App() {
           </>
           }
         </section>
+}
         <Weather />
         <Tickets />
       </main>
   </>    
   );
 }
+
 
 export default App;

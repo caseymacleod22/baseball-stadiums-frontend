@@ -91,7 +91,10 @@ function App() {
           <div>
             <ul  class='stadiuminfo'>
               <li>
-                <Link to='/stadiuminfo'>Stadium Info</Link>
+                <ul>
+                  <Link to='/stadiuminfo'>Stadium Info</Link><br />
+                  <Link to='/welcomepage'>TEST WELCOME PAGE</Link>
+                </ul>
               </li>
               <li>
                 <Route exact path='/stadiuminfo'>

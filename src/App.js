@@ -93,7 +93,7 @@ function App() {
               <li>
                 <ul>
                   <Link to='/stadiuminfo'>Stadium Info</Link><br />
-                  <Link to='/welcomepage'>TEST WELCOME PAGE</Link>
+                  <Link to='/welcome'>TEST WELCOME PAGE</Link>
                 </ul>
               </li>
               <li>

@@ -93,15 +93,11 @@ function App() {
               <li>
                 <ul>
                   <Link to='/stadiuminfo'>Stadium Info</Link><br />
-                  <Link to='/welcome'>TEST WELCOME PAGE</Link>
                 </ul>
               </li>
               <li>
                 <Route exact path='/stadiuminfo'>
                   <StadiumInfo />
-                </Route>
-                <Route exact path='/welcome'>
-                  <Login />
                 </Route>
               </li>
             </ul>
@@ -111,7 +107,8 @@ function App() {
       {
             !state.user &&
             <>
-              <h1>PLEASE LOGIN FIRST!</h1>
+              <h1 class='loggedout'>Welcome to your MLB stadium tracker!</h1>
+              <h4 class='loggedout'>To begin tracking your cross country baseball journey, please login! </h4>
             </>
           }
           {

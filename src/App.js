@@ -7,7 +7,7 @@ import Weather from './components/Weather/Weather'
 import Tickets from './components/Tickets/Tickets'
 import StadiumInfo from './components/Stadiuminfo/StadiumInfo'
 import Login from './components/Login/Login'
-import { BrowserRouter as Router, Route, Link } from 'react-router-dom'
+import { BrowserRouter as Router, Route, Link, Switch } from 'react-router-dom'
 
 function App() {
   const [state, setState] = useState ({
@@ -120,10 +120,10 @@ function App() {
             <article key={s.stadium}>
               <Router>
               <div>
-                <Link to="/stadiuminfo">{s.stadium}</Link>
+                  <a href="/stadiuminfo">{s.stadium}</a>
               </div>
               <div>
-                <Link to="/stadiuminfo">{s.location}</Link>
+                  <a href="/stadiuminfo">{s.location}</a>
               </div><br />
               </Router>
             </article>

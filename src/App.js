@@ -118,12 +118,14 @@ function App() {
           <h2 id='stadiumheader'>My Stadiums</h2>
           {state.stadiums.map((s) => (
             <article key={s.stadium}>
+              <Router>
               <div>
-                <a href="/stadiuminfo">{s.stadium}</a>
+                <Link to="/stadiuminfo">{s.stadium}</Link>
               </div>
               <div>
-                <a href="/stadiuminfo">{s.location}</a>
+                <Link to="/stadiuminfo">{s.location}</Link>
               </div><br />
+              </Router>
             </article>
           ))}
           {

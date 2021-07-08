@@ -108,7 +108,7 @@ function App() {
             !state.user &&
             <>
               <h1 class='loggedout'>Welcome to your MLB stadium tracker!</h1>
-              <h4 class='loggedout'>To begin tracking your cross country baseball journey, please login! </h4>
+              <h4 class='loggedout'>To begin tracking your baseball journey, please login! </h4>
             </>
           }
           {

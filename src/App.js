@@ -81,6 +81,16 @@ function App() {
     }))
   }
 
+  function handleDelete(stadiumId) {
+    if(window.confirm('Are you sure you want to delete this stadium?')) 
+      {
+        fetch('http://localhost:3001/api/stadiums'+stadiumId, {
+          method:'DELETE',
+          headers: {'Content-type': 'Application/json'}
+        })
+    }
+  }
+
   return (
   <>  
   <Helmet>
@@ -124,6 +134,7 @@ function App() {
               </div>
               <div>
                   <a href="/stadiuminfo">{s.location}</a>
+                  <button onClick={() => handleDelete(state._id)}>Remove Stadium</button>
               </div><br />
               </Router>
             </article>

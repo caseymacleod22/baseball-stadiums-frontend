@@ -134,7 +134,7 @@ function App() {
               </div>
               <div>
                   <a href="/stadiuminfo">{s.location}</a>
-                  <button onClick={() => handleDelete(state._id)}>Remove Stadium</button>
+                  <button onClick={() => handleDelete(s._id)}>Remove Stadium</button>
               </div><br />
               </Router>
             </article>

@@ -103,7 +103,7 @@ label {
   padding-right: 4px;
 }
 
-button {
+/* button {
   display: block;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 1rem;
@@ -113,7 +113,7 @@ button {
   color: white;
   border: none;
   outline: none;
-}
+} */
 
 button:hover {
   color: white;

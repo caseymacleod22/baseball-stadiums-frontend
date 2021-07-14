@@ -81,10 +81,10 @@ function App() {
     }))
   }
 
-  function handleDelete(sId) {
+  function handleDelete(stadiumId) {
     if(window.confirm('Are you sure you want to remove this stadium?')) 
       {
-        fetch('http://localhost:3001/api/stadiums/stadiums'+sId, {
+        fetch('http://localhost:3001/api/stadiums/stadiums'+stadiumId, {
           method:'DELETE',
           headers: {'Content-type': 'Application/json'}
         })

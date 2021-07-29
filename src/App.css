@@ -121,10 +121,10 @@ button:hover {
   cursor: pointer;
 }
 
-.stadiuminfo {
+/* .stadiuminfo {
   list-style-type: none;
   color: red;
-}
+} */
 
 .loggedout {
   display: flex;
